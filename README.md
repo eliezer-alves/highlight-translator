@@ -19,4 +19,10 @@ to use it, just clone the repository and load it in the Chrome extensions manage
 ## 5
 ![image](https://user-images.githubusercontent.com/23661672/210280045-7a2fabbb-d061-40c7-9405-d4b08e856bc4.png)
 
+![image](https://user-images.githubusercontent.com/23661672/210280242-20934127-d759-4116-b228-ec0e20972315.png)
+
+## 6
+![image](https://user-images.githubusercontent.com/23661672/210280318-99f64bd3-027a-47ee-a9be-dfc81c59765e.png)
+
+
 
