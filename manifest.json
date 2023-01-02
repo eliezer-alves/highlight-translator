@@ -1,0 +1,17 @@
+{
+  "name": "Highlight Translator",
+  "version": "1.0.0",
+  "description": "Real-time translator of highlighted texts on web pages",
+  "manifest_version": 3,
+  "author": "Eliezer Alves",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Highlight Translator"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["script.js"]
+    }
+  ]
+}
