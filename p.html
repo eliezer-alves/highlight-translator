@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Highlight some of this text with the mouse select press button end release
+      to fire the event. Confira o resultado no console.
+    </p>
+  </body>
+
+  <script>
+    function loadTranslation(value, from = "en-GB", to = "pt-BR") {
+      fetch(
+        `https://api.mymemory.translated.net/get?q=${value}&langpair=${from}|${to}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.clear();
+          console.log(value + " -> " + data.responseData.translatedText);
+        });
+    }
+
+    document.addEventListener("mouseup", (event) => {
+      if (window.getSelection().toString().length) {
+        let exactText = window.getSelection().toString();
+        loadTranslation(exactText);
+      }
+    });
+  </script>
+</html>
