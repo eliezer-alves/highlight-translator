@@ -8,10 +8,17 @@
     "default_popup": "index.html",
     "default_title": "Highlight Translator"
   },
+  "permissions": ["nativeMessaging"],
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
       "js": ["script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["events.js"],
+      "matches": ["https://*/*"]
     }
   ]
 }

@@ -6,6 +6,11 @@ function displayResult(source, result) {
   } else {
     console.log(source + " -> " + result);
   }
+
+  chrome.runtime.sendMessage(result, (response) => {
+    // 3. Got an asynchronous response with the data from the service worker
+    console.log("received user data");
+  });
 }
 
 function loadTranslation(value, from = "en-GB", to = "pt-BR") {
